@@ -1,0 +1,12 @@
+h1{
+    text-align: center;
+    text-transform: uppercase;
+
+}
+p{
+    display: grid;
+    text-indent: 40px;
+    place-items: center;
+  text-align: justify;
+  letter-spacing: 3px;
+}

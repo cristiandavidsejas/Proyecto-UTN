@@ -1,0 +1,23 @@
+nav {
+    background-image: linear-gradient(to left, #972904, #b2002a, #bd005c, #a6009f, #2119e8);
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li{
+    flex-grow: 1;
+
+}
+
+nav ul li a {
+    color:white;
+    text-decoration: none;
+    padding: 3px 6px;
+    display: block;
+    text-align: center;
+}
