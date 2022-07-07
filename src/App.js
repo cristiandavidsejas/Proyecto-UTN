@@ -14,7 +14,7 @@ import Blog from './pages/Blog';
 import Cursos from './pages/Cursos';
 import NosotrosPage from './pages/NosotrosPage';
 import Contacto from './pages/Contacto';
-
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -29,13 +29,13 @@ function App() {
               <Route path='blog' element={<Blog />} />
               <Route path='nosotros' element={<NosotrosPage />} />
               <Route path='Contacto' element={<Contacto />} />
+              <Route path='login' element={<Login />} />
       </Routes>
       </BrowserRouter>
-      
       <Nosotros />
       <Seccion />
       <Footer />
-      
+    
     </div>
   );
 }

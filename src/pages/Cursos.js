@@ -5,7 +5,7 @@ const Cursos = (props) => {
         <div>
         
         
-            <div className="container">
+           {/*<div className="container">
             <div className="card">
                 <img src="img/ingles.jpg"/>
                 <h4>Ingles</h4>
@@ -30,9 +30,9 @@ const Cursos = (props) => {
        
             </div>
             </div>
-
+*/}
         </div>
-       
+    
     );
 }
 

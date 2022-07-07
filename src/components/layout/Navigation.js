@@ -12,7 +12,8 @@ const Navigation = (props) => {
             <li><Link className="a" to="blog">Blog</Link></li>
             <li><Link className="a" to="curso">Cursos</Link></li>
             <li><Link className="a" to="nosotros">Nosotros</Link></li>
-            <li><Link className="a" to="contacto">Contactop</Link></li>
+            <li><Link className="a" to="contacto">Contacto</Link></li>
+            <li><Link className="a" to="login">Login</Link></li>
 
            </ul>
         

@@ -1,12 +1,26 @@
-h1{
-    text-align: center;
-    text-transform: uppercase;
 
+
+.contact-wrap .contact-info {
+    background: #35477d;
+    border-radius: 10px;
 }
-p{
-    display: grid;
-    text-indent: 40px;
-    place-items: center;
-  text-align: justify;
-  letter-spacing: 3px;
+.contact-wrap .contact-info {
+    color: rgba(255, 255, 255, 0.5);
+}
+.contact-wrap .form, .contact-wrap .contact-info {
+    padding: 40px;
+}
+
+.contact-wrap {
+  -webkit-box-shadow: 0 0px 20px 0 rgb(0 0 0 / 20%);
+  box-shadow: 0 0px 20px 0 rgb(0 0 0 / 3%);
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 1;
+}
+.contact-wrap .form {
+  background: #fff;
+   border-radius: 10px;
 }

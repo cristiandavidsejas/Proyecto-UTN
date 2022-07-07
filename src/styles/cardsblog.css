@@ -1,0 +1,7 @@
+.card:hover{
+    box-shadow: 5px 10px 20px 1px ;
+}
+.card-text {
+    padding: 0.1rem ;
+    font-size: 1rem;
+}
