@@ -49,8 +49,6 @@ const Contacto = (props) => {
 </div>
 </div>
 </form>
-
-
 </div>
 </div>
 <div className="col-md-4">
