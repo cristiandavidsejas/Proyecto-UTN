@@ -27,7 +27,7 @@ const cardCurso = [
 
 const Cursos = (props) => {
     return (
-        <div>
+        <div className="cont">
             <div className="container d-flex justify-content-center align-intems-center h-100">
               <div className="row">
                 {cardCurso.map (cardC => (

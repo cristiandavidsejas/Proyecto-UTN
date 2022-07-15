@@ -33,3 +33,11 @@
     font-weight: 300;
 }
 */
+
+.cont{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50%);
+    padding: 40px;
+    gap: 40px;
+    justify-content: center;
+}

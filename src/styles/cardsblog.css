@@ -5,3 +5,11 @@
     padding: 0.1rem ;
     font-size: 1rem;
 }
+.conteinner{
+   display: grid;
+   grid-template-columns: repeat(auto-fill, 300px);
+   gap: 40px;
+   padding: 40px;
+   justify-content: center;
+
+}

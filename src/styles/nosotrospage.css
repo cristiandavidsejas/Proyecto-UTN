@@ -1,0 +1,20 @@
+.cont {
+   
+ display: grid;
+ place-items: center;
+
+    
+}
+
+.info{
+    border: 1px solid black;
+    padding: 100px 50px;
+    margin: 30px;
+    width: 500px;
+    text-align:center;
+    color: white;
+    background: #1C6EA4;
+    background: -moz-radial-gradient(center, #1C6EA4 0%, #2388CB 50%, #144E75 100%);
+    background: -webkit-radial-gradient(center, #1C6EA4 0%, #2388CB 50%, #144E75 100%);
+    background: radial-gradient(ellipse at center, #1C6EA4 0%, #2388CB 50%, #144E75 100%);
+}
