@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, collapseOnSelect } from "react-bootstrap";
 import { Link, Outlet } from "react-router-dom";
 import navigation from '..//../styles/navigation.css';
 
@@ -11,12 +11,14 @@ const Navigation = () =>
 {
     return (
       <div>
-      <Navbar className="navBg " variant="dark" expand="lg">
+      <Navbar collapseOnSelect className="navBg " variant="dark" expand="lg">
         <Container>
-           <div className="col-md-6 offset-md-3">
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="nav justify-content-center ">
+
+           <div className="col-md-8 offset-md-4">
+         
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto ">
                 <Nav.Link as={Link} to="/" >Home</Nav.Link>
                 <Nav.Link as={Link} to="blog">Blog</Nav.Link>
                 <Nav.Link as={Link} to="curso">Cursos</Nav.Link>  
@@ -28,10 +30,6 @@ const Navigation = () =>
             </div>
         </Container>
         </Navbar>  
-
-        <section>
-            <Outlet ></Outlet>
-        </section> 
         </div>
         // <nav className="nav" open={open}>
         //    <a href="#" class="logo nav-link">Logo</a>

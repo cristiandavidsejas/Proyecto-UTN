@@ -5,7 +5,7 @@ const Header = (props) => {
     return (
             <header className="header">
               
-                    <img className="Banner" src="img/Banner.png" width="100%"/>
+                    <img className="Banner" src="img/Banner.png" width="101%" id="banner"/>
                
                
             </header>

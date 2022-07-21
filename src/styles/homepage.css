@@ -5,3 +5,33 @@
     color: #0C0C0C;
     
     }
+    /* modalidad online */
+    .container-online{
+        margin-bottom:10%;
+        color: white;
+    }
+
+h1{
+    padding-bottom: 20px;
+}
+    #online{
+        width: 70%;
+        height: 110%;
+        padding-right: 1%;
+    }
+    p{
+        letter-spacing: 2px;
+        padding: 8px;
+        width: 200px;
+        height: 200px;
+      
+    }
+    /* modalidad presencial */
+    #presencial{
+        width: 100%;
+     
+    }
+    .container-presencial{
+        margin-bottom:10%;
+        color: white;
+    }
