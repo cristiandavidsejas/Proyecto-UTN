@@ -28,7 +28,7 @@ const cardCurso = [
 const Cursos = (props) => {
     return (
         <div className="cont">
-            <div className="container d-flex justify-content-center align-intems-center h-100">
+            <div className="container d-flex  align-intems-center h-100">
               <div className="row">
                 {cardCurso.map (cardC => (
                   <div className="col-md-4 key={cardC.id}">

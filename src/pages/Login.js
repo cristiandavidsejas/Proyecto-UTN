@@ -6,7 +6,7 @@ import login from '../styles/login.css';
 const Login = (props) => {
     return(
        <div><h1 align="center">Administracion Login</h1>
-        <div className="container">
+        <div className="container-login">
        
         <form id="adminForm" className="admin">
             <div className=" form-group mb-2">
