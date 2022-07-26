@@ -5,7 +5,7 @@ import cardsblog from '../styles/cardsblog.css'
 
 
 function CardsBlog({title,imageSource,textp}) {
-    return (<div className="conteinner">
+    return (<div className="container-card">
         <div className="card border=danger text-center ">
       <img src={imageSource} alt=""/>
       <div className="card-body">

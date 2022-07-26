@@ -4,6 +4,7 @@ import Footer from './components/layout/Footer';
 import Seccion from './components/layout/Seccion';
 import Header from './components/layout/Header';
 import Nosotros from './components/layout/Nosotros';
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import HomePage from './pages/HomePage';
@@ -31,8 +32,9 @@ function App() {
       </BrowserRouter>
       <Nosotros />
       <Seccion />
+
       <Footer />
-    
+     
     </div>
   );
 }

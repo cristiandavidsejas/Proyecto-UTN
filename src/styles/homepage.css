@@ -5,6 +5,10 @@
     color: #0C0C0C;
     
     }
+    /* carousel */
+   
+
+    
     /* modalidad online */
     .container-online{
         margin-bottom:10%;
@@ -19,9 +23,11 @@ h1{
         height: 110%;
         padding-right: 1%;
     }
-    p{
+   #info{
+  
         letter-spacing: 2px;
-        padding: 8px;
+        padding-top: 12px;
+        margin-top: 5px;
         width: 200px;
         height: 200px;
       
@@ -34,4 +40,34 @@ h1{
     .container-presencial{
         margin-bottom:10%;
         color: white;
+    }
+    /* info sobre los cursos */
+
+    #info-curso{
+        color: black;
+        font-size: 15px;
+    }
+
+    /* css cursos/home */
+    .container-cursos{
+
+        color: white;
+        font-size: 20px;
+    }
+    #img-kids{
+        width: 80%;
+        
+        padding-left: 100px;
+        margin-bottom: 5px;
+    }
+   
+    #img-taller{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50%;
+    }
+    .btn{
+        margin: 5px;
     }
