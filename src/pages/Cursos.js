@@ -26,22 +26,23 @@ const cardCurso = [
 
 
 const Cursos = (props) => {
-    return (
-        <div className="cont">
-            <div className="container d-flex  align-intems-center h-100">
-              <div className="row">
-                {cardCurso.map (cardC => (
-                  <div className="col-md-4 key={cardC.id}">
-                    <CardsBlog title={cardC.title}/>
+    return (<div>
+        // <div className="cont">
+          
+        //     {/* <div className="container d-flex  align-intems-center h-100">
+        //       <div className="row">
+        //         {cardCurso.map (cardC => (
+        //           <div className="col-md-4 key={cardC.id}">
+        //             <CardsBlog title={cardC.title}/>
 
-                  </div>
-                ))}
-              </div>
+        //           </div>
+        //         ))}
+        //       </div> */}
 
 
 
 
-            </div>
+        //     </div>
 
 
 
