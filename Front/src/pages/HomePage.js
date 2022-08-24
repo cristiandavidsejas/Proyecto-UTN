@@ -7,7 +7,7 @@ import { LoremIpsum, Avatar } from 'react-lorem-ipsum';
 
 const HomePage = (props) => {
     return (
-        <div className="container">
+        <div className="container-home">
             <div id="demotext" align="center">Bienvenido a nuestra academia!</div>
         <div >
         <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
@@ -45,18 +45,18 @@ const HomePage = (props) => {
           <h1 align="center">Cursos 100% online</h1>
           </div>
           <div className="row" >
-            <div className="col-xl  col-lg-4 border border-secondary"><h3 className="subtitulo">Estudia donde quieras</h3>
+            <div className="col-xl  col-lg-4 "><h3 className="subtitulo">Estudia donde quieras</h3>
             <img src="img/online1.png" id="online"/>
             <p id="info">Perfectamente diseñado para darte la libertad de 
                                     aprender cuando quieras y desde cualquier dispositivo.</p></div>
      
            
-            <div className="col-xl col-lg-4 border border-danger"><h3 className="subtitulo">Profesores online</h3>
+            <div className="col-xl col-lg-4 "><h3 className="subtitulo">Profesores online</h3>
             <img src="img/online2.png" id="online"/>
             <p id="info">Profesores nativos y titulados que te motivarán y te ayudarán durante todas las etapas de tu aprendizaje.</p></div>
          
          
-            <div className="col-xl  col-lg-4 border border-dark"><h3 className="subtitulo">Metodo probado y garantizado</h3>
+            <div className="col-xl  col-lg-4"><h3 className="subtitulo">Metodo probado y garantizado</h3>
             <img src="img/online3.png"id="online" />
             <p id="info">Nuestro método garantiza que progresas hacia tus objetivos a través de una combinación de estudio individual y clases guiadas online.</p></div>
             
@@ -65,7 +65,7 @@ const HomePage = (props) => {
           
         </div>
       </div>
-      <div className="container-presencial">
+      {/* <div className="container-presencial">
         <div className="row"> 
         <div className="col"><h1 align="center">Tambien tenemos clases presenciales!</h1></div>
         </div>
@@ -77,7 +77,7 @@ const HomePage = (props) => {
 
 </div>
 
-      </div>
+      </div> */}
 
 
 
@@ -89,7 +89,7 @@ const HomePage = (props) => {
 <h1 align="center">Todos nuestros cursos!</h1>
 <div className="row ">
   
-  <div className=" col-xl  col-md-4 col-lg-4 border border-danger">
+  <div className=" col-xl  col-md-4 col-lg-4 ">
     
     <h3 className="subtitulo">Tenemos cursos de ingles de todos los niveles!</h3>
     <p id="info">Realiza un test online para saber que curso te conviene mas</p>
@@ -105,12 +105,12 @@ const HomePage = (props) => {
     <div class="d-grid gap-2 col-6 mx-auto">
 
   <div class="d-grid gap-2 col-6 mx-auto">
-  <button class="btn btn-primary" type="button">Info!</button>
+  <button class="btn btn-primary" type="button" >Info!</button>
   <button class="btn btn-primary" type="button">Realizar Test</button>
 </div>
 </div>
   </div>
-  <div className="col-xl  col-md-4 col-lg-4 border border-warning"> 
+  <div className="col-xl  col-md-4 col-lg-4 "> 
   <h3 className="subtitulo">Cursos Intensivos!</h3> 
   <p id="info">Cursá un año académico en tan solo un cuatrimestre! Ofrecemos TODOS LOS NIVELES.</p>
   <img src="img/intensivo.png" id="img-kids"/>
@@ -120,7 +120,7 @@ const HomePage = (props) => {
 </div>
 
   </div>
-  <div className="col-xl col-md-4 col-lg-4 border border-info">
+  <div className="col-xl col-md-4 col-lg-4 ">
     <h3 className="subtitulo">Cursos Kids</h3>
     <p id="info">
     *Nos caracterizamos por mantener grupos reducidos para poder brindar una enseñanza bien personalizada.
@@ -146,7 +146,7 @@ const HomePage = (props) => {
 </div>
 
 <div className="row ">
-  <div className="col border border-iwhite">
+  <div className="col ">
     <h3 align="center"> Talleres diversos para que puedas mejorar tu ingles!</h3>
     <img src="img/taller.jpg" id="img-taller"/><br/>
     <ul>
@@ -157,7 +157,7 @@ const HomePage = (props) => {
     </ul>
 
     <div class="d-grid gap-2 col-6 mx-auto">
-  <button class="btn btn-primary" type="button">Info!</button>
+  <button class="btn btn-primary" type="button" >Info!</button>
   
 </div>
   </div>

@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 body{
 
-    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    /* background-image: linear-gradient(to top, #09203f 0%, #537895 100%); */
     /* background-image:linear-gradient(220.55deg, #FF896D 0%, #D02020 100%);; */
     font-family: 'Roboto Condensed', sans-serif;
- 
-}
+    background-image: linear-gradient(to right, #434343 0%, black 100%);}
+
+    /* background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);} */
+    /* background-image: linear-gradient(-225deg, #77FFD2 0%, #6297DB 48%, #1EECFF 100%);} */
 *{
     margin: 0;
     box-sizing: border-box;

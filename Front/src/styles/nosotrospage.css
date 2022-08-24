@@ -10,16 +10,14 @@
 #quienesSomos{
    
     width: 30%;
- 
+    padding-right: 10px;
 
 }
-img{
-    padding-right: 10px;
- 
-}
+
 #info-nosotros{
     font-size: 20px;
     padding-left: 10px;
+    font-weight: 700;
 }
 
 h1{

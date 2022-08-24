@@ -1,7 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import {Form} from "react-bootstrap";
 import { Row, Col} from "react-bootstrap";
 import contacto from '../styles/contacto.css';
+import axios from 'axios';
 const Contacto = (props) => {
+
+//     const [form,setForm] = useState({name:'', correo:'', phone:'',asunto:'',msj:''})
+
+// const handleSubmit = (event) => {
+//   console.log("handleSubmit",form)
+//   event.preventDefault();
+// }
+// const handleChange = (event) => {
+//   const name = event.target.name 
+//   const value = event.target.value
+//   console.log ("handleChange",name,value)
+//   setForm({...form,[name]:value});
+// }
+
+  const initialForm = {
+    nombre: '',
+    email: '',
+    telefono: '',
+    asunto: '',
+    mensaje: ''
+  }
+    const [sending, setSending] = useState(false);
+    const [msg, setMsg] = useState('');
+    const [formData, setFormData] = useState(initialForm);
+
+    const handleChange = e => {
+      const {name, value } = e.target;
+      setFormData(oldData => ({
+        ...oldData,
+        [name]: value
+      }));
+    }
+
+    const handleSubmit = async e => {
+      e.preventDefault();
+      setMsg('');
+      setSending(true)
+      const response = await
+       axios.post('http://localhost:3000/api/contacto', formData);
+      setSending(false);
+      setMsg(response.data.message);
+      if (response.data.error === false) {
+        setFormData(initialForm)
+      }
+    }
+
+
     return (
         <div>
             <div>
@@ -15,36 +65,38 @@ const Contacto = (props) => {
 <div className="col-md-8">
 <div className="form h-100">
 <h2>Contactanos</h2>
-<form className="mb-5" method="" id="contactForm" name="contactForm" novalidate="novalidate">
+<form className="mb-5" method="post" action="/contacto" id="contactForm" name="contactForm" novalidate="novalidate" onSubmit={handleSubmit}>
 <div className="row">
 <div className="col-md-6 form-group mb-5">
 <label for="" className="col-form-label">Nombre *</label>
-<input type="text" className="form-control" name="name" id="name" placeholder="Nombre"/>
+<input type="text" className="form-control" name="nombre" id="nombre" placeholder="Nombre" value={formData.nombre} onChange={handleChange}/>
 </div>
 <div className="col-md-6 form-group mb-5">
 <label for="" className="col-form-label">Correo Electronico *</label>
-<input type="text" className="form-control" name="email" id="email" placeholder="email"/>
+<input type="text" className="form-control" name="email" id="email" placeholder="email" value={formData.email} onChange={handleChange}/>
 </div>
 </div>
 <div className="row">
 <div className="col-md-6 form-group mb-5">
 <label for="" className="col-form-label">Telefono *</label>
-<input type="text" className="form-control" name="phone" id="phone" placeholder="telefono"/>
+<input type="text" className="form-control" name="telefono" id="telefono" placeholder="telefono" value={formData.telefono} onChange={handleChange}/>
 </div>
 <div className="col-md-6 form-group mb-5">
 <label for="" className="col-form-label">Asunto</label>
-<input type="text" className="form-control" name="asunto" id="asunto" placeholder="asunto"/>
+<input type="text" className="form-control" name="asunto" id="asunto" placeholder="asunto" value={formData.asunto} onChange={handleChange}/>
 </div>
 </div>
 <div className="row">
 <div className="col-md-12 form-group mb-5">
 <label for="message" className="col-form-label">Mensaje *</label>
-<textarea className="form-control" name="message" id="message" cols="30" rows="4" placeholder="agregar mensaje"></textarea>
+<textarea className="form-control" name="mensaje" id="message" cols="30" rows="4" placeholder="agregar mensaje" value={formData.mensaje} onChange={handleChange}></textarea>
 </div>
 </div>
+{sending ? <p>Enviando...</p> : null}
+{msg ? <p>{msg}</p> : null}
 <div className="row">
 <div className="col-md-12 form-group">
-<input type="submit"  className="btn btn-primary rounded-0 py-2 px-4"/>
+<input type="submit"  value="enviar" className="btn btn-primary rounded-0 py-2 px-4"/>
 
 </div>
 </div>
