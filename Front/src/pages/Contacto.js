@@ -6,18 +6,7 @@ import contacto from '../styles/contacto.css';
 import axios from 'axios';
 const Contacto = (props) => {
 
-//     const [form,setForm] = useState({name:'', correo:'', phone:'',asunto:'',msj:''})
 
-// const handleSubmit = (event) => {
-//   console.log("handleSubmit",form)
-//   event.preventDefault();
-// }
-// const handleChange = (event) => {
-//   const name = event.target.name 
-//   const value = event.target.value
-//   console.log ("handleChange",name,value)
-//   setForm({...form,[name]:value});
-// }
 
   const initialForm = {
     nombre: '',

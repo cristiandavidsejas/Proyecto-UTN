@@ -5,6 +5,7 @@ border: 30px outset #1C6EA4;
 border-radius: 40px 40px 40px 29px;
 background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
 letter-spacing: 5px;
+font-size: 20px;
 }
 #tituloBlog{
     font-size: 50px;

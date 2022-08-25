@@ -65,25 +65,7 @@ const HomePage = (props) => {
           
         </div>
       </div>
-      {/* <div className="container-presencial">
-        <div className="row"> 
-        <div className="col"><h1 align="center">Tambien tenemos clases presenciales!</h1></div>
-        </div>
-        <div className="row"> 
-
-<div className="col"></div>
-<div className="col"><img src="img/presencial.png" id="presencial"/></div>
-<div className="col"></div>
-
-</div>
-
-      </div> */}
-
-
-
-
-
-
+      
 
 <div className="container-cursos">
 <h1 align="center">Todos nuestros cursos!</h1>
@@ -164,106 +146,6 @@ const HomePage = (props) => {
 </div>
 
 </div>
-{/* <div classNameName="cursos">
-<div className="row row-cols-1 row-cols-md-4 g-4">
-  <div className="col"> m
-    <div className="card">
-      <img src="img/ingles.jpg" className="card-img-top" alt="..."/>
-      <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div className="col">
-    <div className="card">
-      <img src="img/frances.jpg" className="card-img-top" alt="..."/>
-      <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div className="col">
-    <div className="card">
-      <img src="img/italiano.jpeg" className="card-img-top" alt="..."/>
-      <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-  <div className="col">
-    <div className="card">
-      <img src="img/japones.jpg" className="card-img-top" alt="..."/>
-      <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div className="col">
-    <div className="card">
-      <img src="img/portugues.png" className="card-img-top" alt="..."/>
-      <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-  <div className="col">
-    <div className="card">
-      <img src="img/coreano.jpg" className="card-img-top" alt="..."/>
-      <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-        </div> */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-           {/*&<h1>Bienvenido</h1>
-            <div classNameName="container">
-            <div classNameName="card">
-                <img src="img/online.png"/>
-                <h4>Cursos Online</h4>
-                <p>lakjdsfnlkadsng'ojsbndf'lgkn</p>
-                <a href="#">Mas Informacion</a>
-            </div>
-           < div classNameName="card">
-                <img src="img/presencial.png"/>
-                <h4>Cursos presenciales</h4>
-                <p>lakjdsfnlkadsng'ojsbndf'lgkn</p>
-                <a href="#">Mas Informacion</a>
-            </div>
-
-    </div>*/}
         </div>
         </div>
     );

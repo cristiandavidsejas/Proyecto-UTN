@@ -4,7 +4,7 @@ import Footer from './components/layout/Footer';
 import NovedadItem from './components/novedades/NovedadItem';
 import Header from './components/layout/Header';
 import Nosotros from './components/layout/Nosotros';
-import Login from './components/admin/Login';
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NovedadesBlog from './pages/NovedadesBlog';
 import HomePage from './pages/HomePage';
@@ -27,7 +27,7 @@ function App() {
               <Route path='blog' element={<NovedadesBlog />} />
               <Route path='nosotros' element={<NosotrosPage />} />
               <Route path='Contacto' element={<Contacto />} />
-              <Route path='login' element={<Login />} />
+            
       </Routes>
       </BrowserRouter>
       <Nosotros />
