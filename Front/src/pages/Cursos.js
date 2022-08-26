@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import curso from '..//styles/curso.css';
 import { useForm } from "react-hook-form";
 import {Form} from "react-bootstrap";
+import axios from 'axios';
 
 
 
@@ -9,19 +10,39 @@ import {Form} from "react-bootstrap";
 
 const Cursos = (props) => {
 
-const [form,setForm] = useState({nombre:'', apellido:'', email:'',telefono:'', edad:''})
-
-const handleSubmit = (event) => {
-  console.log("handleSubmit",form)
-  event.preventDefault();
+const initialForm = {
+  nombre: '',
+  apellido: '',
+  edad: '',
+  email: '',
+  telefono: '',
+  curso: '',
+  taller: ''
 }
-const handleChange = (event) => {
-  const name = event.target.name 
-  const value = event.target.value
-  console.log ("handleChange",name,value)
-  setForm({...form,[name]:value});
-}
+  const [sending, setSending] = useState(false);
+  const [msg, setMsg] = useState('');
+  const [formData, setFormData] = useState(initialForm);
 
+  const handleChange = e => {
+    const {name, value } = e.target;
+    setFormData(oldData => ({
+      ...oldData,
+      [name]: value
+    }));
+  }
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+    setMsg('');
+    setSending(true)
+    const response = await
+     axios.post('http://localhost:3000/api/inscripcion', formData);
+    setSending(false);
+    setMsg(response.data.message);
+    if (response.data.error === false) {
+      setFormData(initialForm)
+    }
+  }
 return(
   <div className="container-curso">
      <div className="row ">
@@ -96,32 +117,32 @@ anotate!
       <form onSubmit={handleSubmit}>
       <div>
         <label>Nombre</label>
-        <input type="text" class="form-control" name="nombre" value={form.nombre} onChange={handleChange} />
+        <input type="text" class="form-control" name="nombre" value={formData.nombre} onChange={handleChange} />
       </div>
       <div>
         <label>apellido</label>
-        <input type="text" class="form-control" name="apellido" value={form.apellido} onChange={handleChange} />
+        <input type="text" class="form-control" name="apellido" value={formData.apellido} onChange={handleChange} />
       </div>
       <div>
         <label>edad</label>
-        <input type="text" class="form-control" name="edad" value={form.edad} onChange={handleChange} />
+        <input type="text" class="form-control" name="edad" value={formData.edad} onChange={handleChange} />
       </div>
       <div>
         <label>email</label>
-        <input type="email" class="form-control"  name="email" value={form.email} onChange={handleChange} />
+        <input type="email" class="form-control"  name="email" value={formData.email} onChange={handleChange} />
       </div>
       <div>
         <label className="form-label" >Telefono</label>
-        <input type="text" class="form-control" name="telefono" value={form.telefono} onChange={handleChange} />
+        <input type="text" class="form-control" name="telefono" value={formData.telefono} onChange={handleChange} />
       </div>
       <div>
         <label  className="form-label">Cursos</label>
-        <select class="form-select"  onChange={handleChange}>
+        <select class="form-select" name="curso" value={formData.curso} onChange={handleChange}>
           <option value="ninguno">ninguno</option>
-          <option value="curso1">curso kids</option>
-          <option value="curso2">curso para adolecentes </option>
-          <option value="curso3">curso apara adultos</option>
-          <option value="curso4">Curso Intensivo</option>
+          <option value="kids">curso kids</option>
+          <option value="adolecentes">curso para adolecentes </option>
+          <option value="adultos">curso apara adultos</option>
+          <option value="intensivo">Curso Intensivo</option>
         
 
 
@@ -129,17 +150,19 @@ anotate!
       </div>
       <div>
         <label>talleres</label>
-        <select class="form-select" onChange={handleChange}>
+        <select class="form-select" name="taller" value={formData.taller} onChange={handleChange}>
         <option value="ninguno">Ninguno</option>
-          <option value="taller1">taller literario</option>
-          <option value="taller2">taller de conversacion</option>
-          <option value="taller3">ingles para viajeros</option>
-          <option value="taller4">ingles para entrevistas de trabajo</option>
+          <option value="literario">taller literario</option>
+          <option value="conversacion">taller de conversacion</option>
+          <option value="ingles para viajeros">ingles para viajeros</option>
+          <option value="ingles para entrevistas de trabajo">ingles para entrevistas de trabajo</option>
 
 
         </select>
       </div>
-      <button type="text" className="btn btn-primary d-grid gap-2">Inscribirse!</button>
+      {sending ? <p>Enviando...</p> : null}
+      {msg ? <p>{msg}</p> : null}
+      <button type="submit" value="enviar" className="btn btn-primary d-grid gap-2">Inscribirse!</button>
 
 
     </form>

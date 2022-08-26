@@ -8,15 +8,6 @@ router.get('/', function(req, res, next) {
     layout: 'admin/layout'
          });
 });
- 
-router.get('/logout', function (req, res, next){
-  req.session.destroy();//destruye las variables de session (id and user)
-  res.render ('admin/login', {
-    layout:'admin/layout'
-  });
-});
-
-
 
 router.post('/', async (req, res, next) => {
   try {
@@ -31,18 +22,22 @@ router.post('/', async (req, res, next) => {
       req.session.nombre = data.usuario;
       res.redirect('/admin/novedades');
     } else {
-      res.render ('admin/login', {
+      res.render('admin/login', {
         layout: 'admin/layout',
         error: true
       });
     } 
-    
-  
   
   } catch(error){
     console.log(error);
   }
   
+});
+router.get('/logout', function (req, res, next){
+  req.session.destroy();//destruye las variables de session (id and user)
+  res.render('admin/login', {
+    layout:'admin/layout'
+  });
 });
 
 module.exports = router;

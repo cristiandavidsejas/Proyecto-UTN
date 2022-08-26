@@ -58,4 +58,38 @@ router.post('/contacto', async (req, res) =>{
 
 });
 
+router.post('/inscripcion', async (req, res) => {
+    const mail = {
+        to: 'davidcris.sejas@gmail.com',
+        subject:'Contacto web',
+        html:  `nombre: ${req.body.nombre}<br>
+                apellido: ${req.body.apellido}<br>
+                edad: ${req.body.edad}<br>
+                desea anotarse:<br>
+                curso: ${req.body.curso}<br>
+                taller: ${req.body.taller}<br>,
+               se contacto a traves de la web y quiere mas informacion a este correo:
+        ${req.body.email}<br> Su telefono es:
+        ${req.body.telefono}`
+    }
+
+    const transport = nodemailer.createTransport({
+        host: process.env.SMTP_HOST,
+        port: process.env.SMTP_PORT,
+        auth: {
+            user: process.env.SMTP_USER,
+            pass: process.env.SMTP_PASS
+        }
+    });//CIERRA TRANSP
+
+    await transport.sendMail(mail)
+    res.status(201).json({
+        error: false,
+        message: 'Inscripcion enviada!'
+    });
+})
+
+
+
+
 module.exports = router;

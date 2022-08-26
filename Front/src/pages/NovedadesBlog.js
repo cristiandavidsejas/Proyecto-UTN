@@ -25,7 +25,8 @@ const NovedadesBlog = (props) => {
 
     return (
         <section className="">
-            <h2>Novedades</h2>
+              <h1>bienvenido a nuestro blog</h1>
+          
             {loading ? (
                 <p>Cargando...</p>
             ): (

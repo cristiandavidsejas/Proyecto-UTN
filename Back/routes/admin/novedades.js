@@ -95,32 +95,6 @@ router.get('/modificar/:id', async (req, res, next) => {
     });
 });
 
-// router.get('/', async function (req, res, next){
-//     var novedades = await novedadesModel.getNovedades();
-
-    
-//      res.render('admin/novedades',{
-//         layout: 'admin/layout', 
-//         usuario: req.session.nombre,
-//         novedades
-//      });
-
-
-// });
-
-
-// router.post ('/modificar', async (req, res, next) => {
-//     try{
-        
-//         //en dudas.
-//     }catch (error){
-//         console.log(error)
-//         res.render('admin/modificar', {
-//             layout: 'admin/layout', 
-//             error: true, message: 'no se modifico novedad'
-//         })
-//     }
-// });
 
 
 

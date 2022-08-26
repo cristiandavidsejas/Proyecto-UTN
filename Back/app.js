@@ -44,7 +44,7 @@ secured = async (req, res, next) =>{
     console.log(req.session.id_usuario);
     if (req.session.id_usuario){
       next();
-    }else {
+    } else {
       res.redirect('/admin/login');
         }
    } catch (error){
