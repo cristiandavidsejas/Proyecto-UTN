@@ -25,7 +25,7 @@ background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
 
 h1{
     padding-bottom: 20px;
-
+    /* color: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%); */
 }
 .subtitulo{
    text-align: center;
@@ -83,7 +83,9 @@ box-shadow: 0px 10px 13px -7px #000000, 0px 31px 22px 25px rgba(0,0,0,0.38);
        
     }
    #img-kids:hover{
-    box-shadow: 2px 10px 12px 1px ;
+    /* box-shadow: 2px 10px 12px 1px ; */
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 0px 31px 22px 25px rgba(0,0,0,0.38); 
+box-shadow: 0px 10px 13px -7px #000000, 0px 31px 22px 25px rgba(0,0,0,0.38);
    }
     #img-taller{
         display: grid;

@@ -9,9 +9,12 @@ background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
 h1 {
    text-align: center;
    text-transform: uppercase;
-   color: #4CAF50;
+color: #CC0000;
    text-decoration: underline solid rgb(68, 68, 68);
 }
 p{
    text-align: center;
+}
+h3 {
+   color:#991900;
 }
