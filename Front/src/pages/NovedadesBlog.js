@@ -12,8 +12,8 @@ const NovedadesBlog = (props) => {
     useEffect(() => {
         const cargarNovedades = async () => {
             setLoading (true);
-            //const response = await axios.get(${process.env.REACT.APP.API.URL}/api/novedades);
-            const response = await axios.get('http://localhost:3000/api/novedades');
+            const response = await axios.get(`${process.env.REACT.APP.API.URL}/api/novedades`);
+            // const response = await axios.get('http://localhost:3000/api/novedades');
             setNovedades(response.data);
             setLoading(false);
         };
