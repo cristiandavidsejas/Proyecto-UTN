@@ -23,7 +23,8 @@ background: #FFFFFF;
 @media (min-width: 768px){
 
     #imagen-blog{
-        width: 40%;
+        width: 300px;
+        height: 100px;
     }
 
 }
