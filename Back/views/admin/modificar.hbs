@@ -34,7 +34,9 @@
             </div>
             </form>
             {{#if error}}
-                <h5>{{message}}</h5>
+              <div class="alert alert-danger" role="alert">
+                 <p>{{message}}</p>
+            </div>
              {{/if}}
         
         </div>

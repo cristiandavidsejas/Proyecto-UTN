@@ -21,7 +21,10 @@
             
             </form>
             {{#if error}}
-                <p>{{message}}</p>
+            <div class="alert alert-danger" role="alert">
+                 <p>{{message}}</p>
+            </div>
+                
              {{/if}}
         </div>
     </div>

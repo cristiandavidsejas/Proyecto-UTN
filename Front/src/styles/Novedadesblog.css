@@ -19,3 +19,11 @@ background: #FFFFFF;
     margin-right: auto;
     width: 40%;
 }
+
+@media (max-width: 768px){
+
+    #imagen-blog{
+        width: 40%;
+    }
+
+}
