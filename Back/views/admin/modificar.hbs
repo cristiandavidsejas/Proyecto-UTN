@@ -1,7 +1,7 @@
-<div class="container" style="margin: 50px; auto">
+<div class="container-modificar" style="margin: 50px; auto">
     <div class="row">
         <div class="col-6 offset-3">
-            <h4>Modificar la Novedad</h4>
+           
             <form action="/admin/novedades/modificar" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <input type="hidden"
@@ -9,32 +9,29 @@
                 </div>
 
             <div class="form-control">
+                 <h2 align="center">Modificar la Novedad</h2>
+                  <label  class="form-label">Titulo</label>
             <input type="text" placeholder="Titulo"
             value="{{novedad.titulo}}" class="form-control" name="titulo">
 
-            </div>
-            <div class="form-control">
-           <textarea name="subtitulo" placeholder="Subtitulo" id="" cols="30" rows="10" class="form-control">{{novedad.subtitulo}}</textarea>
-            </div>
+            
+            <label  class="form-label">Subtitulo</label>
+           <textarea name="subtitulo" placeholder="Subtitulo" id="" cols="20" rows="10" class="form-control">{{novedad.subtitulo}}</textarea>
+           
 
-            <div class="form-group">
+          
                 <p>
-                    <label>Imagen: <input type="file" name="imagen" id="imagen"/></label>
+                    <label>Imagen: <input class="form-control" type="file" name="imagen" id="imagen"/></label>
                 </p>
                 <p>
-                    <label><input type="checkbox" name="img_delete" id="img_delete" value="1" />Eliminar img actual?</label>
+                    <label><input class="form-check-input" type="checkbox" name="img_delete" id="img_delete" value="1" />Eliminar img actual?</label>
                     <input type="hidden" name="img_original" value="{{novedad.img_id}}">
                 </p>
+        <label  class="form-label">Cuerpo</label>
+        <textarea name="cuerpo" placeholder="Cuerpo" class="form-control" id="" cols="30" rows="10">{{novedad.cuerpo}}</textarea><br>
 
-
-            </div>
-
-            <div class="form-control">
-        <textarea name="cuerpo" placeholder="Cuerpo" class="form-control" id="" cols="30" rows="10">{{novedad.cuerpo}}</textarea>
-
-            </div>
             <button type="submit" class="btn btn-primary">Modificar</button>    
-            
+            </div>
             </form>
             {{#if error}}
                 <h5>{{message}}</h5>

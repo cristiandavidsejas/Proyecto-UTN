@@ -1,7 +1,25 @@
+body{
+    background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+}
+.container-novedad{
+    background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+    -webkit-box-shadow: 8px 0px 0px 0px #DCD0C0, 0px 8px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 5px 5px 15px 5px #000000; 
+box-shadow: 8px 0px 0px 0px #DCD0C0, 0px 8px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 5px 5px 15px 5px #000000;
+
+}
+
+.container-modificar{
+    background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+    -webkit-box-shadow: 8px 0px 0px 0px #DCD0C0, 0px 8px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 5px 5px 15px 5px #000000; 
+box-shadow: 8px 0px 0px 0px #DCD0C0, 0px 8px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 5px 5px 15px 5px #000000;
+}
 #banner{
     width: 100%;
     margin: 5px;
 
+}
+label{
+    font-size: 30px;
 }
 form {
     font-size: 20px;
