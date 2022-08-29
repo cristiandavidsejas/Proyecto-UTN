@@ -20,7 +20,7 @@ background: #FFFFFF;
     width: 40%;
 }
 
-@media (max-width: 768px){
+@media (min-width: 768px){
 
     #imagen-blog{
         width: 40%;
